@@ -24,7 +24,7 @@ function Card(props) {
       className={state == false ? "card-body-unread" : "card-body"}
       style={props.dm == null ? null : { backgroundColor: "transparent" }}
     >
-      <img className="card-pfp" src={props.profilePicture} />
+      <img className="card-pfp" src={props.profilePicture} alt="pfp-img" />
       <div className="card-text-container">
         <div className="card-text">
           <p>
@@ -53,7 +53,7 @@ function Card(props) {
         {props.dm == null ? null : <div className="card-dm">{props.dm}</div>}
       </div>
       {props.post == null ? null : (
-        <img className="card-post" src={props.post} />
+        <img className="card-post" src={props.post} alt="post-img" />
       )}
     </div>
   );
