@@ -1,0 +1,267 @@
+/*CSS RESET*/
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --verylightgrayishblue: hsl(210, 60%, 98%);
+  --lightgrayishblue1: hsl(211, 68%, 94%);
+  --lightgrayishblue2: hsl(205, 33%, 90%);
+  --grayishblue: hsl(219, 14%, 63%);
+  --darkgrayishblue: hsl(219, 12%, 42%);
+  --verydarkblue: hsl(224, 21%, 14%);
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 100%;
+  width: 100%;
+  background-color: var(--verylightgrayishblue);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  border-radius: 6px;
+  box-shadow: 0px 0px 1px 0px black;
+  background-color: var(--white);
+  width: 40%;
+  /* height: 90%; */
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 2%;
+  display: flex;
+  row-gap: 2%;
+  flex-direction: column;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5%;
+}
+
+.header-row p {
+  font-weight: 800;
+  color: var(--darkgrayishblue);
+}
+
+.header-row p:hover {
+  font-weight: 800;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: 100%;
+  background-color: transparent;
+}
+
+.card-body {
+  background-color: var(--verylightgrayishblue);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 4%;
+  padding: 2%;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.card-body-unread {
+  background-color: var(--lightgrayishblue1);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 4%;
+  padding: 2%;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.card-pfp {
+  width: 3rem;
+  height: 3rem;
+  align-self: flex-start;
+}
+
+.card-text {
+  flex-direction: row;
+  color: var(--darkgrayishblue);
+  display: inline-flex;
+}
+
+.card-text-container {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-post-time {
+  color: var(--grayishblue);
+}
+
+.card-dm {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: var(--lightgrayishblue1);
+  border-radius: 5px;
+  color: var(--darkgrayishblue);
+}
+
+.card-dm:hover {
+  cursor: pointer;
+}
+
+.card-post {
+  width: 3rem;
+  height: 3rem;
+  margin-left: auto;
+}
+
+.unread-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--red);
+}
+
+.notification-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5%;
+}
+
+.notification-block {
+  color: white;
+  font-weight: 800;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  width: 3.3rem;
+  height: 1.8rem;
+  background-color: var(--blue);
+}
+
+.blue-hover-sub:hover {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.blue-hover-name {
+  font-weight: 800;
+  color: var(--verydarkblue);
+}
+
+.blue-hover-name:hover {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+
+  .card-post-time {
+    font-size: 0.8rem;
+  }
+
+  .background {
+    height: auto;
+    width: auto;
+  }
+
+  .main-container {
+    border-radius: 0;
+    padding: 1rem;
+    width: 100vw;
+  }
+
+  .header-row p {
+    font-size: 0.8rem;
+  }
+
+  .header-row h1 {
+    font-size: 1.2rem;
+  }
+
+  .notification-block {
+    font-size: 0.8rem;
+    width: 2.5rem;
+    height: 1.5rem;
+  }
+
+  .card-post {
+    width: 15%;
+    height: 15%;
+  }
+
+  .card-pfp {
+    width: 12%;
+    height: 12%;
+  }
+}
